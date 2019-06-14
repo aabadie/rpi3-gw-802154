@@ -1,5 +1,10 @@
-SRC_URI_append = file://25-default.network
+# Enable DHCP on eth0 + IPv4 and IPv6
 
-do_install () {
-    install -m 0755 ${WORKDIR}/25-default.network ${D}${sysconfdir}/systemd/25-default.network
+FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:" 
+
+SRC_URI += "file://25-default.network" 
+
+do_install_append() { 
+    install -m 644 ${WORKDIR}/25-default.network ${D}${sysconfdir}/systemd/network
 }
+
