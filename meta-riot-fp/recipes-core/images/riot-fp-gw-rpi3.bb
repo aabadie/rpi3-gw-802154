@@ -18,9 +18,3 @@ IMAGE_INSTALL_append = " \
                         radvd                    \
                         wpan-tools               \
                        "
-
-INHERIT += "extrausers"
-EXTRA_USERS_PARAMS = " \
-                       useadd -P 'riot-fp' riot; \
-                       usermod -a -G sudo riot;  \
-                     "
