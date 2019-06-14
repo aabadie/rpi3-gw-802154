@@ -7,16 +7,17 @@ EXTRA_IMAGE_FEATURES = ""
 IMAGE_ROOTFS_EXTRA_SPACE = "400000"
 
 IMAGE_INSTALL_append = " \
-                        kernel-modules  \
-                        glibc-utils     \
-                        sudo            \
-                        connman         \
-                        bash            \
-                        vim             \
-			dropbear        \
-                        python3-pip     \
-                        radvd           \
-                        wpan-tools      \
+                        kernel-modules           \
+                        linux-firmware-brcm43430 \
+                        bluez5                   \
+                        sudo                     \
+                        connman                  \
+                        bash                     \
+                        vim                      \
+                        dropbear                 \
+                        python3-pip              \
+                        radvd                    \
+                        wpan-tools               \
                        "
 
 INHERIT += "extrausers"
