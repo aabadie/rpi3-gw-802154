@@ -8,7 +8,6 @@ IMAGE_ROOTFS_EXTRA_SPACE = "400000"
 
 IMAGE_INSTALL_append = " \
                         kernel-modules           \
-                        linux-firmware-brcm43430 \
                         bluez5                   \
                         sudo                     \
                         connman                  \
