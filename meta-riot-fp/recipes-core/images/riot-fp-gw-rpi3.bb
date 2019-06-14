@@ -21,9 +21,7 @@ IMAGE_INSTALL_append = " \
                        "
 
 INHERIT += "extrausers"
-EXTRA_USERS_PARAMS = "\
-                        useradd riot;             \
-                        usermod -P riot-fp riot;  \
-                        usermod  -a -G sudo riot; \
+EXTRA_USERS_PARAMS = " \
+                       useadd -P 'riot-fp' riot; \
+                       usermod -a -G sudo riot;  \
                      "
-
